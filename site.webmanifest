@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "React Demo developed by Covin",
+    "short_name": "Robot Finder",
     "icons": [
         {
             "src": "/android-chrome-144x144.png",
