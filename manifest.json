@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "Robo Icon192.png",
+      "src": "RoboIcon192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "Robo Icon512.png",
+      "src": "RoboIcon512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
