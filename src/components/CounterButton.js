@@ -23,7 +23,11 @@ class CounterButton extends Component {
 
   render () {
     return (
-      <button className="ma2" color={this.props.color} onClick={this.updateCount}>
+      <button 
+        className="ma2" 
+        id='counter'
+        color={this.props.color} 
+        onClick={this.updateCount}>
         Count: {this.state.count}
       </button>
     );
