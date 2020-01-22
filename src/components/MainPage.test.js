@@ -10,10 +10,10 @@ beforeEach(() => {
     searchField: '',
     isPending: false
   }
-  wrapper = shallow(<MainPage { ...mockProps } />)
+  wrapper = shallow(<MainPage { ...mockProps }/>)
 })
 
-it('renders MainPage without crashing', () => {
+it('renders MainPage w/o crashing', () => {
   expect(wrapper).toMatchSnapshot();
 })
 
@@ -25,15 +25,11 @@ it('correctly filters robots', () => {
       name: 'John',
       email: 'john@gmail.com'
     }],
-    searchField: 'john',
+    searchField: 'a',
     isPending: false
   }
-  const wrapper2 = shallow(<MainPage { ...mockProps2} />)
-  expect(wrapper2.instance().filterRobots()).toEqual([{
-    id: 3,
-    name: 'John',
-    email: 'john@gmail.com'
-  }])
+  const wrapper2 = shallow(<MainPage { ...mockProps2 }/>)
+  expect(wrapper2.instance().filterRobots()).toEqual([]);  
 })
 
 it('correctly filters robots 2', () => {
@@ -44,10 +40,13 @@ it('correctly filters robots 2', () => {
       name: 'John',
       email: 'john@gmail.com'
     }],
-    searchField: 'a',
+    searchField: 'john',
     isPending: false
   }
-  const filteredRobots = []
-  const wrapper3 = shallow(<MainPage { ...mockProps3} />)
-  expect(wrapper3.instance().filterRobots()).toEqual(filteredRobots);
+  const wrapper3 = shallow(<MainPage { ...mockProps3 }/>)
+  expect(wrapper3.instance().filterRobots()).toEqual([{
+    id: 3,
+      name: 'John',
+      email: 'john@gmail.com'
+  }]);  
 })
